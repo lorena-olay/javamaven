@@ -42,11 +42,11 @@ public class metodos {
         return numeroAleatorio;
     }
 
-
-    public static void tamanioArrayAleatorio(){
+/*-------------------------------ARRAYS-----------------------------------------------------------*/
+    public static int tamanioArrayAleatorio(){
         Random numAleatorio = new Random();
         Scanner teclado = new Scanner(System.in);
-        int i, tamanio, numeroAleatorio;
+        int i, tamanio, numeroAleatorio = 0;
         final int INICIO_ARRAY = 1;
         final int FINAL_ARRAY = 100;
 
@@ -58,6 +58,7 @@ public class metodos {
             numeroAleatorio = numAleatorio.nextInt(FINAL_ARRAY - INICIO_ARRAY + 1) + INICIO_ARRAY;
             System.out.println(numeroAleatorio);
         }
+        return numeroAleatorio;
     }
 
     //metodo de clonacion
