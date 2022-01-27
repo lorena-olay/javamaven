@@ -1,0 +1,44 @@
+15.- Crea una clase Fecha con atributos para el día, el mes y el año. Incluye, al menos, los siguientes métodos:
+
+Constructor predeterminado con el 1-1-2022, como fecha por defecto.
+
+Constructor parametrizado con día, mes y año. Se debe comprobar que los parámetros introducidos proporcionan una fecha válida. En caso contrario, se lanzará una excepción de tipo IllegalArgument.
+comprobarFecha(int dia, int mes, int anio): comprobará si los parámetros son válidos para crear una nueva fecha.  Ejemplos: 31-2-2010 no es una fecha correcta. Este método se debe usar en el constructor parametrizado.
+
+Métodos get y set. Los métodos set deben tener en cuenta las restricciones lógicas y además que la nueva fecha sea válida. En caso contrario, el método set no hace nada.
+
+bisiesto(): indicará si el año almacenado en el atributo es bisiesto o no.
+
+diasMes(): devolverá el número de días que tiene el mes de la fecha establecida.
+
+mostrarFechaCorta(): mostrará la fecha en formato corto (02-09-2003).
+
+mostrarFechaLarga(): mostrará la fecha en formato largo, empezando por el día de la semana (martes 2 de septiembre de 2003).
+
+diaSemana(): devolverá el día de la semana de la fecha (7 para domingo, 6 para sábado, etc). El 1-1-1900 fue domingo.
+
+diasEntreFechas(Fecha inicial, Fecha final): devolverá el número de días entre ambas fechas. Este método es de clase.
+
+siguiente(): pasará al día siguiente.
+
+anterior(): pasará al día anterior.
+
+copia(): devolverá un objeto Fecha clonando la fecha almacenada en el objeto.
+
+igualQue(Fecha): indica si la fecha es la misma que la proporcionada.
+
+menorQue(Fecha): indica si la fecha es anterior a la proporcionada.
+
+mayorQue(Fecha): indica si la fecha es posterior a la proporcionada.
+
+    Este ejercicio hay que realizarlo utilizando las clases necesarias del paquete java.time. Consultar API de Java8. Ejemplos en https://github.com/jfervic933/fechasHorasJava8
+
+En una clase Utilidades, implementa los siguientes métodos de clase para usarlos en el método main():
+
+leerDia(): leerá un entero por teclado hasta que se encuentre en el rango 1 – 31 y lo devolverá.
+
+leerMes(): leerá un entero por teclado hasta que se encuentre en el rango 1 – 12 y lo devolverá.
+
+leerAnio(): leerá un entero por teclado hasta que se encuentre en el rango 1900 – 2100 y lo devolverá.
+
+En una clase Test, con el método main(), usando los métodos de la clase Utilidades, lee valores para crear tres objetos con las fechas que tú quieras. Prueba los métodos de la clase Fecha con los objetos que consideres oportunos.
