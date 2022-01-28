@@ -8,17 +8,11 @@ public class primitiva {
         int[] arr = new int[7];
         int joker = 0;
         int i;
-
-
-
-        for (i=1; i<=arr.length; i++){
-            joker = (int)(Math.random()*9 + 0);
+        int[] arr1 = {1, 1, 1, 1, 1, 1, 1};
+        for (i = 1; i <= arr.length; i++) {
+            joker = (int) (Math.random() * 9 + 0);
             System.out.println(joker);
         }
-
-        int[] arr1 = {1, 1, 1, 1, 1, 1, 1};
-
-
         /*
         int usuario = 0;
         for (i=1; i<=arr1.length;i++){
@@ -26,23 +20,17 @@ public class primitiva {
             System.out.println(usuario);
         }
         */
-
-        boolean datosRepetidos = false;
-        for (int k=0; i<arr.length; i++){
-            for (int j=0; j<arr1.length; j++){
-                if (arr[i]==arr1[j])
-                    datosRepetidos = true;
-                break; //Rompe la iteración puesto que, si determinó que un dato se repite, no es necesario seguir comparando.
-            }
-        }
-        if(Arrays.equals(arr1, arr)){
+        if (Arrays.equals(arr1, arr)) {
             System.out.println("PREMIO, JOKER BUENO");
-        }else if(datosRepetidos=true){
-            System.out.println("JOKER MALO");
-        }else{
-            System.out.println("No hay premio");
-        }
 
+        } else {
+            Arrays.sort(arr);
+            Arrays.sort(arr1);
+            if (arr == arr1) {
+                System.out.println("JOKER MALO");
+            } else {
+                System.out.println("No hay premio");
+            }
 
 /*
         if(joker == usuario){
@@ -52,5 +40,6 @@ public class primitiva {
         }
         */
 
+        }
     }
 }
