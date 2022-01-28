@@ -74,11 +74,11 @@ public class leerDosArrays {
 
         return numeroAleatorio;
     }
-    public void main(String[] args) {
+   /* public void main(String[] args) {
         multiplicadorArray(tamanioArrayAleatorio(), tamanioArray());
         //tamanioArray();
         //numeroAleatorioEntre(100, 1);
 
 
-    }
+    }*/
 }

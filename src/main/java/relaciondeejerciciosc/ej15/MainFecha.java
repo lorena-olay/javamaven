@@ -1,4 +1,4 @@
-package relaciondeejerciciosc.ej15;
+/*package relaciondeejerciciosc.ej15;
 
 public class MainFecha {
     public static void main(String[] args) {
@@ -7,3 +7,4 @@ public class MainFecha {
 
     }
 }
+*/

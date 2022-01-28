@@ -1,4 +1,4 @@
-package relaciondeejerciciosc.ej15;
+/*package relaciondeejerciciosc.ej15;
 
 import java.time.DayOfWeek;
 import java.time.LocalDate;
@@ -124,3 +124,4 @@ public class Fecha{
         this.ano = ano;
     }
 }
+*/
