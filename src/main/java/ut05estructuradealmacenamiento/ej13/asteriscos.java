@@ -5,7 +5,8 @@ public class asteriscos {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int num = 0;
-        boolean seguir = false;
+        boolean seguir;
+        
         do {
             do {
                 try {
@@ -16,7 +17,7 @@ public class asteriscos {
                     }
                 } catch (InputMismatchException ime) {
                     System.out.println("Introduce un valor numérico");
-                    sc.nextLine();
+                    sc.nextLine(); //ACUERDATE DE LIMPIAR EL BUFFER
                 }
                 seguir = true;
             } while (num != 0);
