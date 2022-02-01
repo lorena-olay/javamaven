@@ -6,7 +6,7 @@ public class asteriscos {
         Scanner sc = new Scanner(System.in);
         int num = 0;
         boolean seguir;
-        
+
         do {
             do {
                 try {
