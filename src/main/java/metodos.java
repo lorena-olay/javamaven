@@ -14,7 +14,7 @@ public class metodos {
     pedir datos scanner
 
     */
-    //COSAS ALEATORIAS
+    //-------------------------------------------COSAS ALEATORIAS
     //metodo que da una letra aleatoria de un string
     public static char letraAleatoria() {
         Random random = new Random();
@@ -41,6 +41,25 @@ public class metodos {
     }
 
 /*-------------------------------ARRAYS-----------------------------------------------------------*/
+
+    public int[] maltiplicadorArray(int[] arr, int[] arr1) {
+        int mul = 0;
+        int mul1 = 0;
+        for (int i = 0; i < arr.length; i++) {
+            System.out.println("índice array: " + i);
+            mul*=arr[i];
+            System.out.println("multiplicacion: " + mul);
+        }
+        for (int i = 0; i < arr1.length; i++) {
+            System.out.println("índice array: " + i);
+            mul1*=arr1[i];
+            System.out.println("multiplicacion: " + mul1);
+        }
+
+        System.out.println("Array Multiplicacion = "+ mul);
+        return arr;
+    }
+
     public static int tamanioArrayAleatorio(){
         Random numAleatorio = new Random();
         Scanner teclado = new Scanner(System.in);
