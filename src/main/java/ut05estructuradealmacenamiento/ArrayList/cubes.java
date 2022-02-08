@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class cubes {
     ArrayList<String> cubes = new ArrayList<String>(); // Create an ArrayList object
 
-    //ublic static void
+    //public static void
 
     public cubes(ArrayList<String> cubes) {
         this.cubes = cubes;
@@ -21,7 +21,7 @@ public class cubes {
 
     @Override
     public String toString() {
-        return "minecraft{" +
+        return "cubes{" +
                 "cubes=" + cubes +
                 '}';
     }
