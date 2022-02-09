@@ -5,8 +5,6 @@ import java.util.ArrayList;
 public class cubes {
     ArrayList<String> cubes = new ArrayList<String>(); // Create an ArrayList object
 
-    //public static voi
-
     public cubes(ArrayList<String> cubes) {
         this.cubes = cubes;
     }
