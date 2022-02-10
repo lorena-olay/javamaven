@@ -4,23 +4,71 @@ import java.util.ArrayList;
 import java.util.Objects;
 
 public class Cancion {
-    private ArrayList<String> Cancion = new ArrayList<String>(); // Create an ArrayList object
+    private static ArrayList<String> Cancion = new ArrayList<String>(); // Create an ArrayList object
 
-    public static boolean estaVacia(ArrayList<String> arr){
-        boolean vacia = false;
-        if (arr.isEmpty()){
-            vacia = true;
-            System.out.println("está vacia");
-        }else {
-            vacia=false;
-            System.out.println("no está vacia");
-        }
-        return vacia;
+    
+
+    /*eliminaCancion(Cancion c), elimina el objeto c si se encuentra en la lista de
+    reproducción. Usa el método remove(Cancion)
+     */
+    /*
+    public void eliminaCancion(Cancion c){
+        System.out.println(this.Cancion);
+        System.out.println(c);
+        System.out.println((Cancion.contains(c)) ? (Cancion.remove(c)) : "no está");
+        System.out.println(Cancion);
     }
 
-    public static int numeroCanciones(ArrayList<String> arr){
-        int size = arr.size();
-        return size;
+     */
+
+    /*eliminaCancion(int): elimina la Cancion que se encuentra en la posición indicada.
+     */
+    public static void eliminaCancion(int i){
+        Cancion.remove(i);
+        System.out.println(Cancion);
+    }
+
+    /*grabarCancion(Cancion): agrega al final de la lista la Cancion proporcionada.
+     */
+    public static void grabarCancion(String cancion){
+        String aux = String.valueOf(Cancion.add(cancion));
+        System.out.println(Cancion);
+    }
+
+    /*cambiarCancion(int, Cancion): cambia la Cancion de la posición indicada por
+    la nueva Cancion proporcionada.
+     */
+    public static void cambiarCancion(int i, String cancion){
+        String aux = Cancion.set(i, cancion);
+        System.out.println(Cancion);
+    }
+
+    /*escucharCancion(int): devuelve la Cancion que se encuentra en la posición
+    indicada.
+     */
+    public static void escucharCancion(int i) {
+        String aux = Cancion.get(i);
+        System.out.println(aux);
+    }
+
+    /*estaVacia(): devuelve si la lista de reproducción está vacía.
+     */
+    public static void estaVacia() {
+        boolean vacia = false;
+        if (Cancion.isEmpty()) {
+            vacia = true;
+            System.out.println("está vacia");
+        } else {
+            vacia = false;
+            System.out.println("no está vacia");
+        }
+    }
+
+    /*numeroCanciones(): devuelve el número de canciones de la lista.
+     */
+    public static void numeroCanciones() {
+        int size = Cancion.size();
+        System.out.println(size);
     }
 
     public Cancion() {
