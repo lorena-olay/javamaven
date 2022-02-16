@@ -15,8 +15,9 @@ public class Programa {
 
          */
         //Calcetin.crearCalcetin();
-        CajonCalcetines.creadorCalcetines();
-
+        //CajonCalcetines.creadorCalcetines();
+        Calcetin.crearCalcetin();
+        Calcetin.crearCalcetin();
 
     }
 

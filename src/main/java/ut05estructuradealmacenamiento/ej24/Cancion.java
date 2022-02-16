@@ -6,6 +6,12 @@ import java.util.Objects;
 public class Cancion {
     private static ArrayList<String> Cancion = new ArrayList<String>(); // Create an ArrayList object
 
+    /*buscarCancion(Cancion c), busca la canción c en la
+    lista de reproducción y devuelve la posición en la que
+    se encuentra. Usa el método indexOf.
+     */
+
+
     /*imprimirLista (ListaReproduccion tmp). Método de clase
     que imprime los nombres de las canciones contenidas en tmp.
      */
