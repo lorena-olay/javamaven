@@ -13,13 +13,15 @@ public class MatrizEnteros {
         final int FILAS = 3;
         final int COLUMNAS = 3;
         int[][] numero = new int[FILAS][COLUMNAS];
-        int num = 1;
+        int sumatoria = 0; // Aquí iremos sumando cada valor
+        int cantidadDeElementos = 0; // Contar los elementos
+        int z = 0;
+
 
         //Carga las numero en la matriz
         for (int f = 0; f < FILAS; f++) {
             for (int c = 0; c < COLUMNAS; c++) {
-                numero[f][c] = num;
-                num++;
+                numero[f][c] = rand.nextInt(100) + 1;
             }
         }
 
@@ -29,7 +31,17 @@ public class MatrizEnteros {
                 System.out.print(numero[f][c] + " ");
             }
             System.out.println();
-
         }
+
+        //Media
+        for (int f = 0; f < numero.length; f++) {
+            for (int c = 0; c < numero[z].length; c++) {
+                int numactual = numero[f][c];
+                sumatoria = sumatoria + numactual;
+                cantidadDeElementos = cantidadDeElementos + 1;
+            }
+        }
+        float promedio = (float) sumatoria / cantidadDeElementos;
+        System.out.printf("La sumatoria es %d y el promedio es %f", sumatoria, promedio);
     }
 }

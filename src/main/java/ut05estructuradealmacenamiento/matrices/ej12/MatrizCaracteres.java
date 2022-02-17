@@ -22,10 +22,7 @@ public class MatrizCaracteres {
                 System.out.print(matriz[f][c] + " ");
             }
             System.out.println();
-
         }
-
-
     }
 
     public static void main(String[] args) {
