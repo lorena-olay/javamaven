@@ -13,12 +13,13 @@ public class MatrizEnteros {
         final int FILAS = 3;
         final int COLUMNAS = 3;
         int[][] numero = new int[FILAS][COLUMNAS];
+        int num = 1;
 
         //Carga las numero en la matriz
         for (int f = 0; f < FILAS; f++) {
             for (int c = 0; c < COLUMNAS; c++) {
-                numero[f][c] = letraQueToca;
-                letraQueToca++;
+                numero[f][c] = num;
+                num++;
             }
         }
 
