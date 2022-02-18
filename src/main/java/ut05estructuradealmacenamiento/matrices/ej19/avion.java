@@ -12,6 +12,7 @@ public class avion {
         Random rand = new Random(100);
         final int FILAS = 25;
         final int COLUMNAS = 4;
+
         int[][] numero = new int[FILAS][COLUMNAS];
         int num = 1;
 
