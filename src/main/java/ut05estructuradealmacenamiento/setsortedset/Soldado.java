@@ -2,7 +2,7 @@ package ut05estructuradealmacenamiento.setsortedset;
 
 import java.util.Objects;
 
-public class Soldado {
+public class Soldado implements Comparable<Soldado> {
     private String nif, nombre, apellido1, apellido2;
     private int edad;
 
@@ -75,16 +75,15 @@ public class Soldado {
         return Objects.hash(getNif());
     }
 
+    @Override
+    public int compareTo(Soldado o) {
+        return this.nif.compareTo(o.nif);
+    }
+
     /*
 Busca en Internet para qué se utiliza la interface <<Comparable>> y cómo se implementa.
 Crea la clase Soldado (nif, nombre, apellido1, apellido2 y edad) con constructores, getters, setters, toString y método equals.
 Se entienden que dos soldados son iguales si su nif es igual.
 */
 
-/*
-PARTE B
-Crea una clase EjercitoOrdenado donde haya la misma funcionalidad pero hay que tener en cuenta que en este caso no hay duplicados y los soldados están ordenados según su nif.
-Crea una clase de prueba para tu clase EjercitoOrdenado, donde se haga uso de los métodos anteriores.
-Sube el proyecto una vez finalizada la tarea.
-*/
 }
