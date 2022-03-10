@@ -1,4 +1,4 @@
-package ut05estructuradealmacenamiento.emparejandocalcetines;
+/*package ut05estructuradealmacenamiento.emparejandocalcetines;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -23,4 +23,6 @@ public enum Colores {
 
 
 }
+
+ */
 
