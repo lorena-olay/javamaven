@@ -6,7 +6,7 @@ package ut05estructuradealmacenamiento.setsortedset;
 
 import java.util.*;
 
-public class EjercitoOrdenado  {
+public class EjercitoOrdenado {
     private SortedSet<Soldado> ejercito;
 
     public EjercitoOrdenado() {
@@ -16,7 +16,7 @@ public class EjercitoOrdenado  {
     //1. Saber el número de soldados que hay.
     public void numSoldados() {
         System.out.printf("Ahora el set contiene %d elementos", this.ejercito.size());
-    }
+    }//return int
 
     //2. Alistar a un solado.
     public void alistarSoldados(Soldado soldado) {
