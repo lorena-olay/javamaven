@@ -1,7 +1,5 @@
-package ut05estructuradealmacenamiento.emparejandocalcetines;
+package ut05estructuradealmacenamiento.emparejandocalcetines.emparejandocalcetines;
 
-import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 
