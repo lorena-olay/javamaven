@@ -8,7 +8,8 @@ public class Rectangulo extends Figura{
         super(base, altura);
     }
 
-    public double area(){
+    @Override
+    public double area() {
         return getAltura()*getBase();
     }
 

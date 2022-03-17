@@ -1,6 +1,6 @@
 package EjerciciosUT06.ej11;
 
-public class Figura {
+public abstract class Figura {
     private double base, altura;
 
     public Figura() {
@@ -11,9 +11,7 @@ public class Figura {
         this.altura = altura;
     }
 
-    public double area(){
-        return getAltura()*getBase();
-    }
+    public abstract double area();//no tiene cuerpo el método abstracto
 
     public double getBase() {
         return base;
