@@ -6,6 +6,21 @@ public class Dado extends Azar{
 
     @Override
     public int lanzar() {
-        return (int) (Math.random()*6);
+        System.out.println("Dado: ");
+        return (int) (Math.random()*6+1);
+    }
+
+    public Dado(int posibilidades) {
+        super(posibilidades);
+    }
+
+    public Dado() {
+    }
+
+    @Override
+    public String toString() {
+        return "Dado{" +
+                "posibilidades=" + posibilidades +
+                '}';
     }
 }
