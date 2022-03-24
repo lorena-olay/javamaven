@@ -3,8 +3,12 @@ package EjerciciosUT06.ej15;
 public class Diputado extends  Legislador{
     private int numAsientos;
 
-    public Diputado(String provinciaQueRepresenta, String partidoPolitico, int numAsientos) {
-        super(provinciaQueRepresenta, partidoPolitico);
+    public Diputado(int numAsientos) {
+        this.numAsientos = numAsientos;
+    }
+
+    public Diputado(String nombre, String apellidos, String NIF, String provinciaQueRepresenta, String partidoPolitico, int numAsientos) {
+        super(nombre, apellidos, NIF, provinciaQueRepresenta, partidoPolitico);
         this.numAsientos = numAsientos;
     }
 

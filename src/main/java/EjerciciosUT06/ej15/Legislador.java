@@ -8,7 +8,8 @@ public abstract class Legislador extends Persona {
     public Legislador() {
     }
 
-    public Legislador(String provinciaQueRepresenta, String partidoPolitico) {
+    public Legislador(String nombre, String apellidos, String NIF, String provinciaQueRepresenta, String partidoPolitico) {
+        super(nombre, apellidos, NIF);
         this.provinciaQueRepresenta = provinciaQueRepresenta;
         this.partidoPolitico = partidoPolitico;
     }
@@ -33,7 +34,7 @@ public abstract class Legislador extends Persona {
 
     @Override
     public String toString() {
-        return "Legislador{" +
+        return super.toString() + "Legislador{" +
                 "provinciaQueRepresenta='" + provinciaQueRepresenta + '\'' +
                 ", partidoPolitico='" + partidoPolitico + '\'' +
                 '}';

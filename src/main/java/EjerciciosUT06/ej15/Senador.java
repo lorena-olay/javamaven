@@ -3,8 +3,12 @@ package EjerciciosUT06.ej15;
 public class Senador extends Legislador{
     private double salarioExtra;
 
-    public Senador(String provinciaQueRepresenta, String partidoPolitico, double salarioExtra) {
-        super(provinciaQueRepresenta, partidoPolitico);
+    public Senador(double salarioExtra) {
+        this.salarioExtra = salarioExtra;
+    }
+
+    public Senador(String nombre, String apellidos, String NIF, String provinciaQueRepresenta, String partidoPolitico, double salarioExtra) {
+        super(nombre, apellidos, NIF, provinciaQueRepresenta, partidoPolitico);
         this.salarioExtra = salarioExtra;
     }
 
