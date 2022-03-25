@@ -10,7 +10,30 @@ public class Medico extends Empleado{
 
     @Override
     public double calcularIRPF() {
-        return 0;
+
+        if(this.especialidad=="cirugía"){
+            return ((getSalario()*25)/100)+getSalario();
+        }else {
+            return ((getSalario()*23.5)/100)+getSalario();
+        }
     }
 
+    public void tratar(Paciente paciente, String medicina){
+        System.out.println("He tratado al paciente " + paciente.getApellidos() + ", " + paciente.getNombre() + " con el medicamento " + medicina);
+    }
+
+    public String getEspecialidad() {
+        return especialidad;
+    }
+
+    public void setEspecialidad(String especialidad) {
+        this.especialidad = especialidad;
+    }
+
+    @Override
+    public String toString() {
+        return  super.toString() + "Medico{" +
+                "especialidad='" + especialidad + '\'' +
+                '}';
+    }
 }

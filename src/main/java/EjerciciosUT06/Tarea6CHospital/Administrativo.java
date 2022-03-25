@@ -15,8 +15,28 @@ public class Administrativo extends Empleado{
 
     @Override
     public double calcularIRPF() {
-        return 0;
+        if (getGrupo()==Grupo.C){
+            return ((getSalario()*Grupo.C.getIrpf()/100)+getSalario());
+        }else if(getGrupo()==Grupo.D){
+            return ((getSalario()*Grupo.D.getIrpf()/100)+getSalario());
+        }else if (getGrupo()==Grupo.E){
+            return ((getSalario()*Grupo.E.getIrpf()/100)+getSalario());
+        }
+        return 0;//si no entra en ningun grupo devuelve 0
     }
 
+    public Grupo getGrupo() {
+        return grupo;
+    }
 
+    public void setGrupo(Grupo grupo) {
+        this.grupo = grupo;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + "Administrativo{" +
+                "grupo=" + grupo +
+                '}';
+    }
 }
