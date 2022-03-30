@@ -10,14 +10,8 @@ public enum Grupo {
     D(18),
     E(18.5);
     private double irpf;
-
-    Grupo(double irpf) {
-        this.irpf = irpf;
-    }
-
-    public double getIrpf() {
-        return irpf;
-    }
+    Grupo(double irpf) {this.irpf = irpf;}
+    public double getIrpf() {return irpf;}
     private static final List<Grupo> VALUES = Collections.unmodifiableList(Arrays.asList(values()));
     private static final int SIZE = VALUES.size();
     private static final Random RANDOM = new Random();

@@ -10,7 +10,6 @@ public class Medico extends Empleado{
 
     @Override
     public double calcularIRPF() {
-
         if(this.especialidad=="cirugía"){
             return ((getSalario()*25)/100)+getSalario();
         }else {

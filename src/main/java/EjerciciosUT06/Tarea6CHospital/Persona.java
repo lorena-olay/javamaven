@@ -5,7 +5,7 @@ import java.time.LocalDate;
 public abstract class Persona {
     private String nombre;
     private String apellidos;
-    private NIF NIF;
+    private NIF NIF=new NIF();
 
     public Persona() {
     }
@@ -16,7 +16,9 @@ public abstract class Persona {
         this.NIF = NIF;
     }
 
-    public void renovarNIF(LocalDate fechaSolicitud){}
+    public void renovarNIF(LocalDate fechaSolicitud){
+        this.NIF.renovar(NIF.getFechaCaducidad().plusYears(fechaSolicitud.getYear()));
+    }
 
     public String getNombre() {
         return nombre;

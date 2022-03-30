@@ -1,7 +1,11 @@
 package EjerciciosUT06.Tarea6CHospital;
 
+import java.util.ArrayList;
+
 public class Hospital {
     private String nombre, direccion, numeroCamas;
+    private ArrayList<Persona> ingresados = new ArrayList<>();
+    private ArrayList<Persona> contratados = new ArrayList<>();
 
     public Hospital() {
     }
@@ -14,10 +18,12 @@ public class Hospital {
 
     public void ingresarPaciente(Paciente paciente){
         System.out.println("Paciente " + paciente.getApellidos() + ", " + paciente.getNombre()+ " ha sido ingresado");
+        ingresados.add(paciente);
     }
 
     public void contratarEmpleado(Empleado empleado){
         System.out.println(empleado.getApellidos()+", "+empleado.getNombre()+" ha sido contratado");
+        contratados.add(empleado);
     }
 
     public String getNombre() {
