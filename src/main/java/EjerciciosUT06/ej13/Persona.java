@@ -1,4 +1,5 @@
 package EjerciciosUT06.ej13;
+
 public abstract class Persona implements Identificable{
     private String nombre, apellidos, NIF;
     private Direccion direccion;

@@ -1,12 +1,9 @@
 package EjerciciosUT06.ej13;
 
-import java.util.Random;
-
 public class Estudiante extends Persona{
-    private String ID;
-    Random r = new Random();
+    private int ID;
 
-    public Estudiante(String nombre, String apellidos, String NIF, Direccion direccion, String ID) {
+    public Estudiante(String nombre, String apellidos, String NIF, Direccion direccion, int ID) {
         super(nombre, apellidos, NIF, direccion);
         this.ID = ID;
     }
@@ -16,18 +13,18 @@ public class Estudiante extends Persona{
         System.out.println("Soy estudiante");
     }
 
-    public String getID() {
+    public int getID() {
         return ID;
     }
 
-    public void setID(String ID) {
+    public void setID(int ID) {
         this.ID = ID;
     }
 
     @Override
     public String toString() {
-        return super.toString()+"Estudiante{" +
-                "ID='" + ID + '\'' +
+        return "Estudiante{" +
+                "ID=" + ID +
                 '}';
     }
 }

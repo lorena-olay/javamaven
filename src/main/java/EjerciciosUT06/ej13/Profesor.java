@@ -1,4 +1,5 @@
 package EjerciciosUT06.ej13;
+
 public class Profesor extends Persona{
     private String especialidad;
 
@@ -9,7 +10,7 @@ public class Profesor extends Persona{
 
     @Override
     public void identificate() {
-        System.out.println("Soy profesor");
+        System.out.println("Soy Profesor");
     }
 
     public String getEspecialidad() {
@@ -22,7 +23,7 @@ public class Profesor extends Persona{
 
     @Override
     public String toString() {
-        return super.toString()+"Profesor{" +
+        return "Profesor{" +
                 "especialidad='" + especialidad + '\'' +
                 '}';
     }

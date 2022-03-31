@@ -1,57 +1,58 @@
 package EjerciciosUT06.ej13;
 
 public class Direccion {
-    private String calle, ciudad, codPostal, pais;
+    private String nomCalle, nomCiudad, nompais;
+    private int codPostal;
 
     public Direccion() {
     }
 
-    public Direccion(String calle, String ciudad, String codPostal, String pais) {
-        this.calle = calle;
-        this.ciudad = ciudad;
+    public Direccion(String nomCalle, String nomCiudad, String nompais, int codPostal) {
+        this.nomCalle = nomCalle;
+        this.nomCiudad = nomCiudad;
+        this.nompais = nompais;
         this.codPostal = codPostal;
-        this.pais = pais;
     }
 
-    public String getCalle() {
-        return calle;
+    public String getNomCalle() {
+        return nomCalle;
     }
 
-    public void setCalle(String calle) {
-        this.calle = calle;
+    public void setNomCalle(String nomCalle) {
+        this.nomCalle = nomCalle;
     }
 
-    public String getCiudad() {
-        return ciudad;
+    public String getNomCiudad() {
+        return nomCiudad;
     }
 
-    public void setCiudad(String ciudad) {
-        this.ciudad = ciudad;
+    public void setNomCiudad(String nomCiudad) {
+        this.nomCiudad = nomCiudad;
     }
 
-    public String getCodPostal() {
+    public String getNompais() {
+        return nompais;
+    }
+
+    public void setNompais(String nompais) {
+        this.nompais = nompais;
+    }
+
+    public int getCodPostal() {
         return codPostal;
     }
 
-    public void setCodPostal(String codPostal) {
+    public void setCodPostal(int codPostal) {
         this.codPostal = codPostal;
-    }
-
-    public String getPais() {
-        return pais;
-    }
-
-    public void setPais(String pais) {
-        this.pais = pais;
     }
 
     @Override
     public String toString() {
         return "Direccion{" +
-                "calle='" + calle + '\'' +
-                ", ciudad='" + ciudad + '\'' +
-                ", codPostal='" + codPostal + '\'' +
-                ", pais='" + pais + '\'' +
+                "nomCalle='" + nomCalle + '\'' +
+                ", nomCiudad='" + nomCiudad + '\'' +
+                ", nompais='" + nompais + '\'' +
+                ", codPostal=" + codPostal +
                 '}';
     }
 }
