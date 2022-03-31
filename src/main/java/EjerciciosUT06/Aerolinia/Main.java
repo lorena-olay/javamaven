@@ -74,6 +74,8 @@ public class Main {
         return map;
     }
     public static void main(String[] args) {
+        //PRUEBAS
+        /*
         System.out.println(crearPasajero());
         System.out.println(crearlistaPasajero());
         System.out.println(crearVuelo());
@@ -81,34 +83,28 @@ public class Main {
         System.out.println(numPasajerosDestino(crearListaVuelos()));
         System.out.println(ordenadoNumPasajerosDestino(crearListaVuelos()));
         System.out.println(listaPasajerosEnVuelo(crearListaVuelos()));
-       /*
-        System.out.println("****************************************DESORDENADO*****************************************************");
-        Iterator it = numPasajerosDestino(crearListaVuelos()).keySet().iterator();
-        while(it.hasNext()){
-            String key = (String) it.next();
-            System.out.println("CiudadDestino: "  + key +" -> Pasajeros: " + numPasajerosDestino(crearListaVuelos()).get(key) );
+         */
+        //Iterator<String> it = numPasajerosDestino(crearListaVuelos()).keySet().iterator();
+        System.out.println("***************************************LISTA DESORDENADA**********************************************");
+        for (Map.Entry<String,Integer> pair : numPasajerosDestino(crearListaVuelos()).entrySet()) {
+            System.out.println("Destino: "+pair.getKey() + " -> Número de pasajeros: "+pair.getValue());
+        }
+        System.out.println("***************************************LISTA ORDENADA**********************************************");
+        for (Map.Entry<String,Integer> pair : ordenadoNumPasajerosDestino(crearListaVuelos()).entrySet()) {
+            System.out.println("Destino: "+pair.getKey() + " -> Número de pasajeros: "+pair.getValue());
+        }
+        System.out.println("***************************************LISTA PASAJEROS EN CADA VUELO**********************************************");
+        for (Map.Entry<String,ArrayList<Pasajero>> pair : listaPasajerosEnVuelo(crearListaVuelos()).entrySet()) {
+            System.out.println("Código del vuelo: "+pair.getKey() + " -> Lista de pasajeros: "+pair.getValue());
         }
 
-        System.out.println("****************************************ORDENADO*****************************************************");
-        it = ordenadoNumPasajerosDestino(crearListaVuelos()).keySet().iterator();
-        while(it.hasNext()){
-            String key = (String) it.next();
-            System.out.println("CiudadDestino: "  + key +" -> Pasajeros: " + ordenadoNumPasajerosDestino(crearListaVuelos()).get(key));
-        }
-
-        System.out.println("****************************************LISTA DE PASAJEROS EN X VUELO*****************************************************");
-        it = listaPasajerosEnVuelo(crearListaVuelos()).keySet().iterator();
-        while(it.hasNext()){
-            String key = (String) it.next();
-            System.out.println("Código de vuelo: " + key + " -> Lista de pasajeros: " + listaPasajerosEnVuelo(crearListaVuelos()).get(key));
-
-            }
-
-        */
 
 
 
-        }
+
+
+
+    }
 
     }
 
