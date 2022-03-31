@@ -19,7 +19,7 @@ public class Prueba {
         int[] codpostal={29866,26844,4555,1242};
         return new Direccion(calles[r.nextInt(calles.length)],ciudad[r.nextInt(ciudad.length)],pais[r.nextInt(pais.length)],codpostal[r.nextInt(codpostal.length)] );
     }
-
+/*
     public static Profesor crearProfesor(){
         Random r = new Random();
         String[] nombres= {"Paula","Arturo","Fernanda","Luisa"};
@@ -27,7 +27,7 @@ public class Prueba {
         String[] NIF={"11111111","22222222","33333333","44444444"};
         return new Profesor(nombres[r.nextInt(nombres.length)],apellidos[r.nextInt(apellidos.length)],NIF[r.nextInt(NIF.length)],crearDireccion() );
     }
-
+*/
 
     public static void main(String[] args) {
         ArrayList<Persona> list = new ArrayList<>();
