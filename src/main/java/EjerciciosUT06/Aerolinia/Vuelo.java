@@ -2,6 +2,7 @@ package EjerciciosUT06.Aerolinia;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class Vuelo {
     private String codVuelo, ciudadOrigen, ciudadDestino;
@@ -69,5 +70,18 @@ public class Vuelo {
                 ", duracion=" + duracion +
                 ", lista=" + lista +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Vuelo)) return false;
+        Vuelo vuelo = (Vuelo) o;
+        return Objects.equals(getCiudadDestino(), vuelo.getCiudadDestino());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getCodVuelo(), getCiudadOrigen(), getCiudadDestino(), getDuracion(), getLista());
     }
 }

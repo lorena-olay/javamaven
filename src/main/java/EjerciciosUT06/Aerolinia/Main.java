@@ -26,7 +26,7 @@ public class Main {
     public static Vuelo crearVuelo(){
         Random r = new Random();
         String[] ciudadOrigen = {"Madrid", "Paris", "Ucrania", "Lisboa", "Málaga"};
-        String[] ciudadDestino = {"Barcelona", "Tokio", "Salvador", "Cancún", "Canadá"};
+        String[] ciudadDestino = {"Tokio", "Tokio", "Tokio", "Tokio", "Tokio", "Tokio"};
         ArrayList<Pasajero> list=crearlistaPasajero();
         LocalDate fecha = LocalDate.now().plusWeeks(2);
         return new Vuelo(RandomStringUtils.randomNumeric(10),ciudadOrigen[r.nextInt(ciudadOrigen.length)],ciudadDestino[r.nextInt(ciudadDestino.length)],fecha, list);
@@ -43,11 +43,19 @@ public class Main {
     //- metodo estatico: return map - contiene, para cada destino el numero de pasajeros que llegan al destino
     public static Map<String,Integer> numPasajerosDestino(ArrayList<Vuelo> v){
         Map<String, Integer> map = new HashMap<String, Integer>();
-        for (Vuelo a:v) {
-            map.put(a.getCiudadDestino(),a.getLista().size());
-            map.put(a.getCiudadDestino(),a.getLista().size());
-            map.put(a.getCiudadDestino(),a.getLista().size());
+        ArrayList<Vuelo> B=new ArrayList<>();
 
+        for (Vuelo a:v) {
+            if(a.getCiudadDestino().equals(a.getCiudadDestino())){
+                B.add(a);
+                v.remove(a);
+            }
+        }
+        for (Vuelo a:v){
+            map.put(a.getCiudadDestino(),a.getLista().size())
+        }
+        for (Vuelo a:B){
+            map.put(a.getCiudadDestino(),a.getLista().size())
         }
         return map;
     }
