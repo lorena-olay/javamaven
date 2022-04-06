@@ -39,23 +39,14 @@ public class Main {
         lista.add(crearVuelo());
         return lista;
     }
-
     //- metodo estatico: return map - contiene, para cada destino el numero de pasajeros que llegan al destino
     public static Map<String,Integer> numPasajerosDestino(ArrayList<Vuelo> v){
         Map<String, Integer> map = new HashMap<String, Integer>();
-        ArrayList<Vuelo> B=new ArrayList<>();
-
         for (Vuelo a:v) {
             if(a.getCiudadDestino().equals(a.getCiudadDestino())){
-                B.add(a);
-                v.remove(a);
+                map.put(a.getCiudadDestino(),(a.getLista().size()+a.getLista().size()));
             }
-        }
-        for (Vuelo a:v){
-            map.put(a.getCiudadDestino(),a.getLista().size())
-        }
-        for (Vuelo a:B){
-            map.put(a.getCiudadDestino(),a.getLista().size())
+            map.put(a.getCiudadDestino(),a.getLista().size());
         }
         return map;
     }
@@ -105,14 +96,6 @@ public class Main {
         for (Map.Entry<String,ArrayList<Pasajero>> pair : listaPasajerosEnVuelo(crearListaVuelos()).entrySet()) {
             System.out.println("Código del vuelo: "+pair.getKey() + " -> Lista de pasajeros: "+pair.getValue());
         }
-
-
-
-
-
-
-
     }
-
-    }
+}
 
