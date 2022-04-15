@@ -1,5 +1,4 @@
 package Anexo.tarea1GUILorena;
-
 import javax.swing.*;
 import java.awt.*;
 
@@ -31,4 +30,6 @@ public class MiPanel extends JPanel {
     public JLabel getEtiqueta() {
         return etiqueta;
     }
+
+
 }
