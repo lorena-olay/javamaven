@@ -12,10 +12,23 @@ public class EscribirFicheroTexto {
         // Fichero a crear. Ruta relativa a la carpeta raíz del proyecto
         String idfichero = "array.txt";
 
-        // Array a escribir
-        int numeros [][] = {{1,2,3,4,5},{6,7,8,9,10},{11,12,13,14,15}};
+        // Array a escribi
+        int fila = 4;
+        int columna = 4;
+        int numeros [][] = new int[fila][columna];
+        int l = 0;
+        int n = 0;
 
-// Estructura try-with-resources. Instancia el objeto con el fichero a escribir
+        for (int i=0;i<numeros.length;i++){
+            l+=100;
+            for (int j=0;j<numeros[i].length;j++){
+                numeros[i][j] = l+n;
+                n+=1;
+            }
+            l-=numeros[i].length;
+        }
+
+        // Estructura try-with-resources. Instancia el objeto con el fichero a escribir
         // y se encarga de cerrar el recurso "flujo" una vez finalizadas las operaciones
         try (BufferedWriter flujo = new BufferedWriter(new FileWriter(idfichero))){
 
