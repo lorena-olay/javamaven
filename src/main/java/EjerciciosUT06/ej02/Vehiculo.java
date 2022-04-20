@@ -93,9 +93,13 @@ public class Vehiculo { private String matricula;
 
     @Override
     public String toString() {
-        return "Vehiculo{" + "marca=" + marca + ", modelo=" + modelo + ", color=" + color + '}';
+        return "Vehiculo{" +
+                "matricula='" + matricula + '\'' +
+                ", marca='" + marca + '\'' +
+                ", modelo='" + modelo + '\'' +
+                ", color='" + color + '\'' +
+                ", tarifa=" + tarifa +
+                ", disponible=" + disponible +
+                '}';
     }
-
-
-
 }
