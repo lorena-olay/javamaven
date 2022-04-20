@@ -32,7 +32,7 @@ public class Deportivo extends Vehiculo{
 
     @Override
     public String toString() {
-        return "Deportivo{" +
+        return super.toString()+"Deportivo{" +
                 "caballos=" + caballos +
                 ", suspension=" + suspension +
                 '}';
