@@ -12,7 +12,10 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Locale;
 import java.util.Random;
-
+//Guarda los vehículos en un fichero de texto llamado “vehículos.txt”, haciendo uso del método polimórfico toString(), teniendo en cuenta que el string devuelto lleve separados
+// los campos del objeto por el carácter dos puntos (:).
+//Cada línea del fichero estará compuesta por un número, un espacio, un guión, un espacio y los datos del vehículo en cuestión. El número de cada línea será 0, 1 o 2 si el objeto
+// es un Turismo, un Deportivo o una Furgoneta, respectivamente.
 public class FicheroVehiculo {
     static Random r = new Random();
     static String[] marcas = {"audi", "ford", "tesla", "jeep", "renolt"};
@@ -40,23 +43,21 @@ public class FicheroVehiculo {
             listaVehiculos.add(crearFurgoneta());
         }
 
-        //Guarda los vehículos en un fichero de texto llamado “vehículos.txt”, haciendo uso del método polimórfico toString(), teniendo en cuenta que el string devuelto lleve separados
-        // los campos del objeto por el carácter dos puntos (:).
-        //Cada línea del fichero estará compuesta por un número, un espacio, un guión, un espacio y los datos del vehículo en cuestión. El número de cada línea será 0, 1 o 2 si el objeto
-        // es un Turismo, un Deportivo o una Furgoneta, respectivamente.
         // Fichero a crear. Ruta relativa a la carpeta raíz del proyecto
         String idfichero = "vehículos.txt";
-        //String linea = "ABCDEFGHIJKLMNÑOPQRSTUVWXYZabcdefghijklmnñopqrsty";
         // Estructura try-with-resources. Instancia el objeto con el fichero a escribir
         // y se encarga de cerrar el recurso "flujo" una vez finalizadas las operaciones
         try (BufferedWriter flujo = new BufferedWriter(new FileWriter(idfichero))){
             for (Vehiculo v: listaVehiculos) {
                 if(v instanceof Turismo){
-                    flujo.write( 0 + " - " + v.toString() + "\n");//Cada vehículo irá en una línea distinta del fichero.
+                    flujo.write( 0 + " - " + v.getMatricula()+":"+v.getMarca()+":"+v.getModelo()+":"+v.getColor()+":"+v.getTarifa()+":"+((Turismo) v).isMarchaAutomatica()+":"+((Turismo) v).getPuertas()+":");//Cada vehículo irá en una línea distinta del fichero.
+                    flujo.newLine();//cuanto menos toquemos las clases modelo mejor
                 }else if(v instanceof Deportivo){
-                    flujo.write( 1 + " - " + v.toString()+ "\n");
+                    flujo.write( 1 + " - " + v.toString());
+                    flujo.newLine();
                 }else {
-                    flujo.write( 2 + " - " + v.toString()+ "\n");
+                    flujo.write( 2 + " - " + v.toString());
+                    flujo.newLine();
                 }
             }
         } catch (IOException e) {
