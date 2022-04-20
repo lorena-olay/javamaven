@@ -20,9 +20,9 @@ public class EscribirFicheroLinea {
             do {
                 System.out.printf("Escribe: ");
                 escrito = entradaTeclado.nextLine();
-                flujo.write(escrito + "\n");
+                flujo.write(escrito);
+                flujo.newLine();
             }while(!(escrito.equals("EOF")));
-
 
             // Metodo newLine() añade línea en blanco
             flujo.newLine();
