@@ -14,7 +14,12 @@ public class LeerFichero3 {
         String linea;
         System.out.println("Leyendo el fichero: " + idFichero);
         int contador = 0;
-        ArrayList<Integer> ocurrencias=new ArrayList<>();
+        ArrayList<String> ocurrencias=new ArrayList<>();
+        final String W="w";
+        final String E="e";
+        final String B="b";
+        String posicionW;
+
         // Inicialización del flujo "datosFichero" en función del archivo llamado "idFichero"
         // Estructura try-with-resources. Permite cerrar los recursos una vez finalizadas
         // las operaciones con el archivo
@@ -26,11 +31,29 @@ public class LeerFichero3 {
                 // informando de la posición que ocupan en la línea, si es que existe esa ocurrencia.
                 linea = datosFichero.nextLine(); //Se lee la línea
                 contador++;
-                if(linea.equals("w")||linea.equals("e")||linea.equals("b")){
-                    ocurrencias.add(contador);
+                if(linea.contains(W)){
+                    if (linea.indexOf(W)>0){
+                        posicionW=("W -> "+"Linea: "+String.valueOf(contador)+"; Posición: "+linea.indexOf(W));
+                        ocurrencias.add(posicionW);
+                    }
+                }
+                if(linea.contains(E)){
+                    if (linea.indexOf(E)>0){
+                        posicionW=("E -> "+"Linea: "+String.valueOf(contador)+"; Posición: "+linea.indexOf(E));
+                        ocurrencias.add(posicionW);
+                    }
+                }
+                if(linea.contains(B)){
+                    if (linea.indexOf(B)>0){
+                        posicionW=("B -> "+"Linea: "+String.valueOf(contador)+"; Posición: "+linea.indexOf(B));
+                        ocurrencias.add(posicionW);
+                    }
                 }
                 System.out.println(linea); // Se imprime en pantalla
             }
+            System.out.printf("OCURRENCIAS: \n");
+            ocurrencias.forEach(System.out::println);
+
         } catch (FileNotFoundException e) {
             System.out.println(e.getMessage());
         }
