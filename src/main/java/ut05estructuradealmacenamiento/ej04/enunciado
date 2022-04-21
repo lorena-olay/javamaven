@@ -1,5 +1,0 @@
-Escribe un programa que, dado un array de enteros de cualquier tamaño, busque si un número
-obtenido por teclado se encuentra en el array e imprima la primera posición en la que se
-encuentra el número. Realiza la búsqueda de un elemento:
-a) implementando el método de búsqueda secuencial.
-b) usando el método de búsqueda binaria de la clase Arrays.
