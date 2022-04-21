@@ -10,7 +10,6 @@ public class LeerFichero3 {
         // Fichero a leer
         String idFichero = "75lineas.txt";
         // Variables para guardar los datos que se van leyendo
-        String[] tokens;
         String linea;
         System.out.println("Leyendo el fichero: " + idFichero);
         int contador = 0;
