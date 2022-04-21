@@ -50,13 +50,16 @@ public class FicheroVehiculo {
         try (BufferedWriter flujo = new BufferedWriter(new FileWriter(idfichero))){
             for (Vehiculo v: listaVehiculos) {
                 if(v instanceof Turismo){
-                    flujo.write( 0 + " - " + v.getMatricula()+":"+v.getMarca()+":"+v.getModelo()+":"+v.getColor()+":"+v.getTarifa()+":"+((Turismo) v).isMarchaAutomatica()+":"+((Turismo) v).getPuertas()+":");//Cada vehículo irá en una línea distinta del fichero.
+                    flujo.write( 0 + " - " + v.getMatricula()+":"+v.getMarca()+":"+v.getModelo()+":"+v.getColor()+":"
+                            +v.getTarifa()+":"+((Turismo) v).isMarchaAutomatica()+":"+((Turismo) v).getPuertas()+":");//Cada vehículo irá en una línea distinta del fichero.
                     flujo.newLine();//cuanto menos toquemos las clases modelo mejor
                 }else if(v instanceof Deportivo){
-                    flujo.write( 1 + " - " + v.toString());
+                    flujo.write( 1 + " - " + v.getMatricula()+":"+v.getMarca()+":"+v.getModelo()+":"+v.getColor()+":"
+                            +v.getTarifa()+":"+((Deportivo) v).getCaballos()+":"+((Deportivo) v).getSuspension()+":");
                     flujo.newLine();
                 }else {
-                    flujo.write( 2 + " - " + v.toString());
+                    flujo.write( 2 + " - " + v.getMatricula()+":"+v.getMarca()+":"+v.getModelo()+":"+v.getColor()+":"
+                            +v.getTarifa()+":"+((Furgoneta) v).isGrande()+":");
                     flujo.newLine();
                 }
             }
