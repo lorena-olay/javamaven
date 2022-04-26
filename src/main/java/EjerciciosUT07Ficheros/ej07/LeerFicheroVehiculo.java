@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class LeerFicheroVehiculo {
+
     public static void main(String[] args) throws FileNotFoundException {
         //7.- Realiza un programa que lea los datos del ejercicio 4. Para ello creará una lista de objetos de
         // tipo Vehículo. El programa irá almacenando en la lista los objetos leídos desde el archivo de texto
@@ -21,6 +22,7 @@ public class LeerFicheroVehiculo {
             while (datosFichero.hasNextLine()) {
                 linea = datosFichero.nextLine();
                 System.out.println(linea);
+
             }
         } catch (FileNotFoundException e) {
             System.out.println(e.getMessage());
