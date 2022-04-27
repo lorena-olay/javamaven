@@ -23,6 +23,7 @@ public class LeerFicheroVehiculo {
                 linea = datosFichero.nextLine();
                 System.out.println(linea);
 
+
             }
         } catch (FileNotFoundException e) {
             System.out.println(e.getMessage());
