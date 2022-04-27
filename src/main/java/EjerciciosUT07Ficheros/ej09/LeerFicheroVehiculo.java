@@ -15,12 +15,16 @@ public class LeerFicheroVehiculo {
         // el resultado por consola.
         String idFichero = "vehículos.txt";
         String linea;
+        String[] token;
         ArrayList<Vehiculo> listavehiculo = new ArrayList<>();
+        Vehiculo auxvehiculo;
         System.out.println("Leyendo el fichero: " + idFichero);
         try (Scanner datosFichero = new Scanner(new FileReader(idFichero))) {
             while (datosFichero.hasNextLine()) {
                 linea = datosFichero.nextLine();
-                System.out.println(linea);
+                token = linea.split(":");
+                auxvehiculo = new Vehiculo(token[0],token[1],token[2],token[3],Double.parseDouble(token[4]));
+                if ()
             }
         } catch (FileNotFoundException e) {
             System.out.println(e.getMessage());
