@@ -24,7 +24,7 @@ public class LeerFicheroVehiculo {
                 linea = datosFichero.nextLine();
                 token = linea.split(":");
                 auxvehiculo = new Vehiculo(token[0],token[1],token[2],token[3],Double.parseDouble(token[4]));
-                if ()
+                //if ()
             }
         } catch (FileNotFoundException e) {
             System.out.println(e.getMessage());
