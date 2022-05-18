@@ -14,9 +14,7 @@ public class CartaDAO implements ICarta{
 
     @Override
     public List<CartaVO> getAll() throws SQLException {
-
         List<CartaVO> lista = new ArrayList<>();
-
         // Preparamos la consulta de datos mediante un objeto Statement
         // ya que no necesitamos parametrizar la sentencia SQL
         try (Statement st = con.createStatement()) {
@@ -29,13 +27,12 @@ public class CartaDAO implements ICarta{
                 p.setPk(res.getInt("pk"));
                 p.setContenido(res.getString("contenido"));
                 p.setRecordado(res.getBoolean("recordado"));
-
                 //Añadimos el objeto a la lista
                 lista.add(p);
             }
         }
-
-        return lista;    }
+        return lista;
+    }
 
     @Override
     public CartaVO findByPk(int pk) throws SQLException {
@@ -65,10 +62,8 @@ public class CartaDAO implements ICarta{
 
     @Override
     public int insertCarta(CartaVO carta) throws SQLException {
-
             int numFilas = 0;
             String sql = "insert into carta values (?,?,?)";
-
             if (findByPk(carta.getPk()) != null) {
                 // Existe un registro con esa pk
                 // No se hace la inserción
@@ -90,11 +85,9 @@ public class CartaDAO implements ICarta{
     @Override
     public int insertCarta(List<CartaVO> lista) throws SQLException {
         int numFilas = 0;
-
         for (CartaVO tmp : lista) {
             numFilas += insertCarta(tmp);
         }
-
         return numFilas;
     }
 
