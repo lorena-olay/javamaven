@@ -1,4 +1,4 @@
-package ej4;
+/*package ej4;
 
 import ej5.Metodos;
 
@@ -17,3 +17,4 @@ public class Prueba {
 
     }
 }
+*/
