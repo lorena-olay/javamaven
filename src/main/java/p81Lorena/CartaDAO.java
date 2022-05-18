@@ -144,8 +144,9 @@ public class CartaDAO implements ICarta{
         }
     }
 
-    public int cambiarAOlvidado(int pk, boolean is) throws SQLException {
+    public int cambiarAOlvidado(int pk) throws SQLException {
         int res = 0;
+        boolean is = false;
         // Dos ?, uno para newName y otro para oldName
         String sql = "{call cambiar-A-Olvidado (?,?)}";
         // Preparamos la llamada al procedimiento almacenado
