@@ -1,22 +1,19 @@
 package p81Lorena;
 
-import java.time.LocalDate;
-
 public class CartaVO {
     private int pk;
     private String contenido;
-    private LocalDate fecha;
     private boolean recordado;
 
     public CartaVO() {
     }
 
-    public CartaVO(int pk, String contenido, LocalDate fecha, boolean recordado) {
+    public CartaVO(int pk, String contenido, boolean recordado) {
         this.pk = pk;
         this.contenido = contenido;
-        this.fecha = fecha;
         this.recordado = recordado;
     }
+
 
     public int getPk() {
         return pk;
@@ -34,13 +31,7 @@ public class CartaVO {
         this.contenido = contenido;
     }
 
-    public LocalDate getFecha() {
-        return fecha;
-    }
 
-    public void setFecha(LocalDate fecha) {
-        this.fecha = fecha;
-    }
 
     public boolean isRecordado() {
         return recordado;
@@ -55,7 +46,6 @@ public class CartaVO {
         return "CartaVO{" +
                 "pk=" + pk +
                 ", contenido='" + contenido + '\'' +
-                ", fecha=" + fecha +
                 ", recordado=" + recordado +
                 '}';
     }
