@@ -42,10 +42,13 @@ public class CartaVO {
         this.fecha = fecha;
     }
 
-    public boolean isRecordado(boolean recordado) {
-        return this.recordado;
+    public boolean isRecordado() {
+        return recordado;
     }
 
+    public void setRecordado(boolean recordado) {
+        this.recordado = recordado;
+    }
 
     @Override
     public String toString() {
