@@ -13,20 +13,20 @@ public interface ICarta {
     CartaVO findByPk(int pk) throws SQLException;
 
     // Método para insertar un registro
-    int insertCarta (CartaVO persona) throws SQLException;
+    int insertCarta(CartaVO persona) throws SQLException;
 
     // Método para insertar varios registros
-    int insertCarta (List<CartaVO> lista) throws SQLException;
+    int insertCarta(List<CartaVO> lista) throws SQLException;
 
     // Método para borrar una persona
-    int deleteCarta (CartaVO p) throws SQLException;
+    int deleteCarta(CartaVO p) throws SQLException;
 
     // Método para borrar toda la tabla
     int deleteCarta() throws SQLException;
 
     // Método para modificar una carta. Se modifica a la persona que tenga esa 'pk'
     // con los nuevos datos que traiga la persona 'nuevosDatos'
-    int updateCarta (int pk, CartaVO nuevosDatos) throws SQLException;
+    int updateCarta(int pk, CartaVO nuevosDatos) throws SQLException;
 
 }
 

@@ -10,25 +10,22 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- *
  * @author J. Carlos F. Vico <jcarlosvico@maralboran.es>
  */
 public class Programa {
 
     public static void main(String[] args) {
-        
-        
         CartaDAO daoCarta = new CartaDAO();
         List<CartaVO> listaCartas = new ArrayList<>();
-        listaCartas.add(new CartaVO(1,"Contenido1",false));
-        listaCartas.add(new CartaVO(2,"Contenido2",false));
-        listaCartas.add(new CartaVO(3,"Contenido3",true));
-        listaCartas.add(new CartaVO(4,"Contenido4",true));
-        listaCartas.add(new CartaVO(5,"Contenido5",true));
-        
+        listaCartas.add(new CartaVO(1, "Contenido1", false));
+        listaCartas.add(new CartaVO(2, "Contenido2", false));
+        listaCartas.add(new CartaVO(3, "Contenido3", true));
+        listaCartas.add(new CartaVO(4, "Contenido4", true));
+        listaCartas.add(new CartaVO(5, "Contenido5", true));
+
         try {
-            
-            System.out.println("Nº personas insertadas " + daoCarta.insertCarta(listaCartas));
+
+            System.out.println("Nº cartas insertadas " + daoCarta.insertCarta(listaCartas));
             System.out.println("-----------------------------------------");
             System.out.println("Comprobamos en una nueva lista que se recogen los datos desde la tabla.");
             List<CartaVO> nuevaLista = daoCarta.getAll();
@@ -38,20 +35,20 @@ public class Programa {
             System.out.println("Carta con primary key 1: ");
             System.out.println(daoCarta.findByPk(1));
             System.out.println("-----------------------------------------");
-            System.out.println("Se va a borrar la persona con pk 3");
-            System.out.println("Nº personas borradas " + 
-                    daoCarta.deleteCarta(new CartaVO(3,"Pablo Pérez", false)));
+            System.out.println("Se va a borrar la carta con pk 3");
+            System.out.println("Nº cartas borradas " +
+                    daoCarta.deleteCarta(new CartaVO(3, "Pablo Pérez", false)));
             System.out.println("-----------------------------------------");
             nuevaLista = daoCarta.getAll();
-            System.out.println("-------- Lista con datos recogidos desde la B.D despues de borrar una persona -------------");
+            System.out.println("-------- Lista con datos recogidos desde la B.D despues de borrar una carta -------------");
             nuevaLista.forEach(System.out::println);
             System.out.println("-----------------------------------------");
-            System.out.println("Modificación de la persona con pk 5");
-            System.out.println("Nº Cartas modificadas " + 
-                    daoCarta.updateCarta(5, new CartaVO(7,"NuevoNombre", false)));
+            System.out.println("Modificación de la carta con pk 5");
+            System.out.println("Nº Cartas modificadas " +
+                    daoCarta.updateCarta(5, new CartaVO(7, "NuevoNombre", false)));
             System.out.println("-----------------------------------------");
             nuevaLista = daoCarta.getAll();
-            System.out.println("-------- Lista con datos recogidos desde la B.D despues de modificar una persona -------------");
+            System.out.println("-------- Lista con datos recogidos desde la B.D despues de modificar una carta -------------");
             nuevaLista.forEach(System.out::println);
             System.out.println("-----------------------------------------");
             System.out.println("Ejecución del procedimiento almacenado");
@@ -68,7 +65,5 @@ public class Programa {
         }
         System.out.println();
         listaCartas.forEach(System.out::println);
-
     }
-
 }

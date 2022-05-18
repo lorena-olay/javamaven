@@ -9,7 +9,6 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 /**
- *
  * @author J. Carlos F. Vico <jcarlosvico@maralboran.es>
  */
 
@@ -21,7 +20,7 @@ public class Conexion {
     private static final String PASS = "contraseña";
 
     private static Connection instancia = null;
-    
+
     // Constructor privado no accesible desde otras clases
     private Conexion() {
 

@@ -6,8 +6,9 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CartaDAO implements ICarta{
+public class CartaDAO implements ICarta {
     private Connection con = null;
+
     public CartaDAO() {
         con = Conexion.getInstance();
     }
@@ -62,24 +63,24 @@ public class CartaDAO implements ICarta{
 
     @Override
     public int insertCarta(CartaVO carta) throws SQLException {
-            int numFilas = 0;
-            String sql = "insert into carta values (?,?,?)";
-            if (findByPk(carta.getPk()) != null) {
-                // Existe un registro con esa pk
-                // No se hace la inserción
-                return numFilas;
-            } else {
-                // Instanciamos el objeto PreparedStatement para inserción
-                // de datos. Sentencia parametrizada
-                try (PreparedStatement prest = con.prepareStatement(sql)) {
-                    // Establecemos los parámetros de la sentencia
-                    prest.setInt(1, carta.getPk());
-                    prest.setString(2, carta.getContenido());
-                    prest.setBoolean(3, carta.isRecordado());
-                    numFilas = prest.executeUpdate();
-                }
-                return numFilas;
+        int numFilas = 0;
+        String sql = "insert into carta values (?,?,?)";
+        if (findByPk(carta.getPk()) != null) {
+            // Existe un registro con esa pk
+            // No se hace la inserción
+            return numFilas;
+        } else {
+            // Instanciamos el objeto PreparedStatement para inserción
+            // de datos. Sentencia parametrizada
+            try (PreparedStatement prest = con.prepareStatement(sql)) {
+                // Establecemos los parámetros de la sentencia
+                prest.setInt(1, carta.getPk());
+                prest.setString(2, carta.getContenido());
+                prest.setBoolean(3, carta.isRecordado());
+                numFilas = prest.executeUpdate();
             }
+            return numFilas;
+        }
     }
 
     @Override

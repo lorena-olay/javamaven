@@ -32,7 +32,6 @@ public class CartaVO {
     }
 
 
-
     public boolean isRecordado() {
         return recordado;
     }
