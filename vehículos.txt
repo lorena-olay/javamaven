@@ -1,0 +1,30 @@
+0 - JIWHX:audi:golf:blanco:5.0:false:0:
+0 - NYHDQ:renolt:todo incluido:negro:5.0:false:0:
+0 - KJTRN:ford:cuadrado:magenta:5.0:false:0:
+0 - NH5VQ:ford:golf:magenta:5.0:false:0:
+0 - IYC1M:jeep:hueco:blanco:5.0:false:0:
+0 - F2J08:audi:golf:celeste:5.0:true:0:
+0 - REIUO:ford:cuadrado:magenta:5.0:true:0:
+0 - XB5NB:renolt:todo incluido:negro:5.0:true:0:
+0 - 7DBXF:ford:golf:magenta:5.0:true:0:
+0 - FUIZB:tesla:grande:celeste:5.0:false:0:
+1 - 0YP3N:ford:grande:naranja:5.0:0:0:
+1 - 3AYOX:audi:cuadrado:blanco:5.0:0:0:
+1 - TL7GV:tesla:hueco:negro:5.0:0:0:
+1 - ZVMVE:ford:grande:naranja:5.0:0:0:
+1 - O9UEK:ford:hueco:negro:5.0:0:0:
+1 - XJGEW:ford:hueco:celeste:5.0:0:0:
+1 - 1BOEB:ford:cuadrado:negro:5.0:0:0:
+1 - DZHTH:renolt:grande:celeste:5.0:0:0:
+1 - 6BTL3:tesla:todo incluido:magenta:5.0:0:0:
+1 - YVXCV:tesla:todo incluido:negro:5.0:0:0:
+2 - JSHAY:jeep:golf:blanco:5.0:false:
+2 - STKLW:jeep:grande:magenta:5.0:false:
+2 - XTT5B:jeep:golf:naranja:5.0:false:
+2 - 5L8YK:renolt:grande:magenta:5.0:false:
+2 - XXFUK:renolt:hueco:blanco:5.0:false:
+2 - OPPHB:audi:grande:magenta:5.0:true:
+2 - 3ISBT:audi:hueco:blanco:5.0:false:
+2 - I1B20:tesla:todo incluido:naranja:5.0:false:
+2 - XC6OG:jeep:todo incluido:celeste:5.0:true:
+2 - PYG0L:jeep:hueco:negro:5.0:false:
