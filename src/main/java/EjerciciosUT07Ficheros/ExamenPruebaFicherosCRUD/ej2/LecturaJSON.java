@@ -6,12 +6,10 @@ import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.List;
 
 public class LecturaJSON<T> {
-
-    public static <T> List<T> leerArchivoJSON1(String nombre, Class<T> clase) {
-        List<T> datos = new ArrayList<>();
+    public static <T> ArrayList<T> leerArchivoJSON1(String nombre,Class<T> clase) {
+        ArrayList<T> datos = new ArrayList<>();
         ObjectMapper mapeador = new ObjectMapper();
         mapeador.registerModule(new JavaTimeModule()); //para poder manejar fechas
         try {
@@ -23,6 +21,11 @@ public class LecturaJSON<T> {
         return datos;
     }
 
-
-
+    public static ArrayList<RegistroJSON> leerFicheroJSON(String idFichero) throws IOException {
+        ObjectMapper mapeador = new ObjectMapper();
+        mapeador.registerModule(new JavaTimeModule());
+        ArrayList<RegistroJSON> calificaciones = mapeador.readValue(new File(idFichero),
+                mapeador.getTypeFactory().constructCollectionType(ArrayList.class, RegistroJSON.class));
+        return calificaciones;
+    }
 }

@@ -25,4 +25,24 @@ public class LecturaCSV {
         }
         return map;
     }
+/* MODULARIZAR LA LECTURA SEPARANDOLA DEL MAP
+    public static <T> List<T> leerCsv(String nombre, String separador) {
+        List<T> datos = new ArrayList<>();
+        try (Scanner sc = new Scanner(new File(nombre),"WINDOWS-1252")) {//formato del archivo
+            while (sc.hasNextLine()) {
+                String linea = sc.nextLine();
+                linea = linea.replaceAll(" ", "");
+                linea = linea.replaceAll("\"", "");
+
+                String[] datosLinea = linea.split(separador);
+
+            }
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+
+        return datos;
+    }
+
+ */
 }
