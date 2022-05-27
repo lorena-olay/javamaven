@@ -3,46 +3,35 @@ package ej1;
 import java.util.ArrayList;
 
 public class Baraja {
-    private Palos palo;
-
+    private String palo;
     private String numero;
-
     private static final String[] numeros = {"2","3","4","5","6","7","8","9", "10","J","Q","K","A"};
+    private static final String[] palos = {"Picas","Rombos","Treboles","Corazones"};
 
     public Baraja() {
     }
 
-    public Baraja(Palos palo, String numero) {
+    public Baraja(String palo, String numero) {
         this.palo = palo;
         this.numero = numero;
     }
 
     public static ArrayList<Baraja> crearCartas(){
         ArrayList<Baraja> baraja = new ArrayList<>();
-        for (int i = 0; i < 13; i++) {
-            Baraja aux = new Baraja(Palos.PICAS, numeros[i]);
-            baraja.add(aux);
-        }
-        for (int i = 0; i < 13; i++) {
-            Baraja aux = new Baraja(Palos.ROMBOS, numeros[i]);
-            baraja.add(aux);
-        }
-        for (int i = 0; i < 13; i++) {
-            Baraja aux = new Baraja(Palos.TREBOLES, numeros[i]);
-            baraja.add(aux);
-        }
-        for (int i = 0; i < 13; i++) {
-            Baraja aux = new Baraja(Palos.CORAZONES, numeros[i]);
-            baraja.add(aux);
+        for (int j = 0; j < 4; j++) {
+            for (int i = 0; i < 13; i++) {
+                Baraja aux = new Baraja(palos[j], numeros[i]);
+                baraja.add(aux);
+            }
         }
         return baraja;
     }
 
-    public Palos getPalo() {
+    public String getPalo() {
         return palo;
     }
 
-    public void setPalo(Palos palo) {
+    public void setPalo(String palo) {
         this.palo = palo;
     }
 
