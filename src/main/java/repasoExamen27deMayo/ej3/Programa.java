@@ -24,6 +24,8 @@ public class Programa {
     }
 
     public static void main(String[] args) {
-        Lecturatxt.leer("./matriz.txt");
+
+        Lecturatxt.vecinos(Lecturatxt.leer("./matriz.txt"));
+
     }
 }
